@@ -150,10 +150,13 @@ section > div{
   flex-flow: row wrap;
 }
 
-comp p{
+.comp p{
   flex: 0 0 40%;
 }
-
-.cont-barr{
-  
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  color: #fff;
 }
