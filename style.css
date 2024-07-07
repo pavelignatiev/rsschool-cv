@@ -10,8 +10,11 @@
   }
 
 @media (max-width: 768px) {
-  .section {
-    width: 100%;
+  .main-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+    .section {
+    width: auto; 
   }
 }
 
@@ -49,19 +52,19 @@ body {
 
 .profile {
     display: flex;
-    width: 100%;
+    
     padding: 50x 30px 35px;
     align-items: center;
     border-bottom: 2px solid #3e91a8;
 }
 
 .profile-info {
-    display: flex;
-    align-items: center; /* Центрирует элементы по вертикали */
-    gap: 20px; /* Добавляет небольшое расстояние между аватаром и текстом профиля */
+    align-items: center;
+    gap: 20px;
 }
 
 .header {
+    display: flex;
     max-width: 1440px;
     text-align: center;
     font-family: Electrolize, sans-serif;
@@ -90,37 +93,36 @@ body {
 }
 
 .main {
+    
     justify-content: column;
     margin-bottom: auto;
 }
 
 .container {
+    display: flex;
     max-width: 1440px;
     margin: auto;
 }
 
 .main-container {
-    
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     flex-wrap: wrap;
     justify-content: space-between;
 
 }
 
 .section {
-    width: 50%;
-    margin-bottom: 20px solid #ccc;
+    margin-bottom: 20px; /* Исправлено здесь */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #5e7b99;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 720px; 
 }
 
 .section h2 {
     margin-top: 0;
-}
-
-.section-profile-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: right;
-    padding: 20px 320px 35px;
 }
 
 .section-item a {
@@ -136,8 +138,9 @@ body {
 .contacts, .summary, .skills, .code, 
 .courses, .projects, .education, .english{
     width: 50%;
-    max-width: 1440px;
     background-color: #5e7b99;
+    justify-content: space-between;
+    max-width: 768;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
@@ -155,7 +158,7 @@ body {
 .rsschool {
     width: 121px;
     height: 45px;
-    background-image: url("assets/svg/rsschool-logo.svg");
+    background-image: url("./assets/svg/rsschool-logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
