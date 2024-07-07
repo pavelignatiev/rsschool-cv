@@ -1,162 +1,142 @@
-*{
-  font-family: Avenir, sans-serif;
-  padding: 0px;
-  margin: 0px;
-  text-align: justify;
-  box-sizing: border-box;
+@font-face {
+    font-family: "Roboto";
+    src: url("assets/fonts/RobotoFlex-Regular.ttf");
+}
+@font-face {
+    font-family: "Electrolize";
+    src: url("assets/fonts/Electrolize-Regular.ttf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@media (max-width: 768px) {
+  .section {
+    width: 100%;
+  }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #573434;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
   
+.name {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-body{
-  background: #ededed;
+.header {
+    margin-top: 1440px;
+    text-align: center;
+    font-family: Electrolize, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
 }
 
-p{
-  font-size: 1em;
-  line-height: 1.5em;
+.avatar {
+    width: 150px;
+    height: 150px;
+    margin-top: 0;
+    margin-left: 150px;
+    box-shadow: 0px 0px 10px #343a40;
+    padding: 1px;
+    border-radius: 50%;
 }
 
-a {
+.nav{
+    text-align: center;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-link {
+    text-align: right;
+    padding: 20px;
+    line-height: 50px;
+    transition: 0.3s;
+}
+
+.main {
+    display: flex;
+    justify-content: column;
+}
+
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;   
+}
+
+.section {
+    margin-top: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    border-top: 1px solid #ccc;
+
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+.section-item a {
+  color: #829985;
   text-decoration: none;
-  color: #000;
+  transition: color 0.5s;
 }
 
-header, footer{
-  width: 100%;
-  padding: 20px 0px;
-  background: url("resume-cover.jpg") #4f4f4f
-  back-shadow: 0px 0px 15px #333;
+.section-item a:hover {
+  color: #4d2323;
 }
 
-header{
-  border-bottom: 2px solid #fff;
-  height: 120px;
-}
-header h1{
-  color: white;
-  font-size: 1.5em;
-  width: 90%;
-  margin: 0 auto;
-}
-
-footer {
-  border-top: 2px solid #fff;
-  background-image: url("resume-cover.jpg");
+.contacts, .summary, .skills, .code, 
+.courses, .projects, .education, .english{
+    width: 50%;
+    background-color: #627f9c;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-footer p{
-  width: 90%;
-  margin: 0 auto;
-  color: #fff;
-  text-align: center;
-}
-footer a{
-  color: #fff;
+.footer {
+    background-color: #a3b0bd;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
-section {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  width: 100%;
-  padding-bottom:20px;
-  margin: 20px auto;
-  box-shadow: 0px 0px 10px #bbb;
-  background-color: #fff;
-}
-
-section h2{
-  margin: 20px 0;
-  width: 90%;
-}
-
-section > div{
-  width: 90%;
-}
-
-.photo{
-  text-align: right;
-}
-.photo img{
-  width: 150px;
-  height: 150px;
-  border: 3px solid #fff;
-  box-shadow: 0px 0px 10px #777;
-  border-radius: 50%;
-  margin-top: -80px;
-}
-
-.prez{
-  border-bottom: 2px dashed #ccc;
-}
-
-.prez a{
-  display: block;
-  text-align: center;
-  padding: 10px;
-  margin: 10px auto 30px auto;
-  color: #fff;
-  background-color: #EA0;
-  box-shadow: 0px 0px 10px #ccc;
-  border-radius: 5px;
-}
-
-
-.contact-flex{
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
-
-.contact-flex p  first-child{
-  flex: 0 0 40%;
-}
-.contact-flex p last-child{
-  flex: 0 0 60%;
-}
-
-.exp{
-  display: flex;
-  flex-flow: row wrap;
-  border-bottom: 1px solid #bbb;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
-
-.exp-info{
-  display: flex;
-  flex-flow: column wrap;
-}
-
-.exp-logo{
-  flex: 0 0 25%;
-  max-width: 100px;
-}
-
-.exp img{
-  width: 100%
-}
-.exp h3{
-  font-size: 1.2em;
-}
-
-.exp h4{
-  font-size: 1em;
-  font-weight: normal;
-}
-
-.comp{
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.comp p{
-  flex: 0 0 40%;
-}
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  color: #fff;
+.github-logo {
+    width: 50px; 
+    height: auto; 
+    margin-top: 10px;
 }
