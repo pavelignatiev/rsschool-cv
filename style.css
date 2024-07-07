@@ -35,35 +35,42 @@ body {
 * {
     box-sizing: border-box;
 }
-  
-.name {
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    box-shadow: 0px 0px 10px #343a40;
+    padding: 1px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: .3s;
+} 
+
+.profile {
+    display: flex;
+    width: 100%;
+    padding: 50x 30px 35px;
+    align-items: center;
+    border-bottom: 2px solid #3e91a8;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center; /* Центрирует элементы по вертикали */
+    gap: 20px; /* Добавляет небольшое расстояние между аватаром и текстом профиля */
 }
 
 .header {
-    margin-top: 1440px;
+    max-width: 1440px;
     text-align: center;
     font-family: Electrolize, sans-serif;
     font-size: 25px;
     font-weight: bold;
 }
 
-.avatar {
-    width: 150px;
-    height: 150px;
-    margin-top: 0;
-    margin-left: 150px;
-    box-shadow: 0px 0px 10px #343a40;
-    padding: 1px;
-    border-radius: 50%;
-}
-
 .nav{
-    text-align: center;
+    text-align: top;
 }
 
 .nav-list {
@@ -75,37 +82,45 @@ body {
 
 .nav-link {
     text-align: right;
-    padding: 20px;
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 18px;
     line-height: 50px;
     transition: 0.3s;
 }
 
 .main {
-    display: flex;
     justify-content: column;
-}
-
-
-.main-container {
-    display: flex;
-    flex-wrap: wrap;
+    margin-bottom: auto;
 }
 
 .container {
     max-width: 1440px;
-    margin: auto;   
+    margin: auto;
+}
+
+.main-container {
+    
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
 
 .section {
-    margin-top: 20px;
-    padding: 20px;
-    flex-wrap: wrap;
-    border-top: 1px solid #ccc;
-
+    width: 50%;
+    margin-bottom: 20px solid #ccc;
 }
 
 .section h2 {
     margin-top: 0;
+}
+
+.section-profile-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: right;
+    padding: 20px 320px 35px;
 }
 
 .section-item a {
@@ -121,7 +136,8 @@ body {
 .contacts, .summary, .skills, .code, 
 .courses, .projects, .education, .english{
     width: 50%;
-    background-color: #627f9c;
+    max-width: 1440px;
+    background-color: #5e7b99;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
@@ -132,11 +148,23 @@ body {
     background-color: #a3b0bd;
     color: white;
     text-align: center;
+    justify-content: space-between;
     padding: 10px;
+}
+
+.rsschool {
+    width: 121px;
+    height: 45px;
+    background-image: url("assets/svg/rsschool-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .github-logo {
     width: 50px; 
     height: auto; 
     margin-top: 10px;
+    background-image: url("./assets/img/GitHub_Logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
